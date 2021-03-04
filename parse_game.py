@@ -30,8 +30,8 @@ for frame in tqdm(game.frames):
             if y > maxY:
                 maxY = y
 
-            port_positions[f'player_{i + 1}_x'] = pos.x
-            port_positions[f'player_{i + 1}_y'] = pos.y
+            port_positions[f'player{i + 1}X'] = pos.x
+            port_positions[f'player{i + 1}Y'] = pos.y
 
     positions.append(port_positions)
 
@@ -44,5 +44,5 @@ game_data = {
     'maxY': maxY,
 }
 
-with open('game_positions.json', 'w') as f:
+with open('gamePositions.json', 'w') as f:
     json.dump(game_data, f)
